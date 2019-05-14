@@ -42,7 +42,7 @@ Now we will use OpenVAS to perform a scan against our target host.
    * If you are following this exercise at home, you will need to get your default admin password from the steps in the previous section.
 3. Once logged in, click `Scans`, then `Tasks` in the fly-down menu
 
-`image goes here`
+![ScansTasks](/screenshots/RSSC19_1.png)
 
 4. Click the purple `Wizard` icon in the top-left corner
 
