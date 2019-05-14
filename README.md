@@ -30,13 +30,15 @@ openvas-setup
 ```
 
 4. This process will take some time to complete. When it's finished, it will print information on how to connect to the service, including the default admin password, which is randomly generated.
-`image goes here`
+
+![AdminCreds](/screenshots/RSSC19_admin_password.png)
 
 ### Login to OpenVAS and Execute Scan
 
 Now we will use OpenVAS to perform a scan against our target host.
 
-1. Launch Firefox (or your preferred web browser) and navigate to https://127.0.0.1:9392
+1. Launch Firefox (or your preferred web browser) and navigate to https://192.168.100.12:9392
+   * If you are executing this on your own and not at RSSC19, the setup should automatically load your browser for you and point you to the service on your localhost, which is https://127.0.0.1:9392
 2. Login with the username `admin` and your password.
    * If you are following this exercise at RSSC19, the admin password is `RSSC19`
    * If you are following this exercise at home, you will need to get your default admin password from the steps in the previous section.
@@ -46,7 +48,7 @@ Now we will use OpenVAS to perform a scan against our target host.
 
 4. Click the purple `Wizard` icon in the top-left corner
 
-`image goes here`
+![ScanWizard](/screenshots/RSSC19_2.png)
 
 5. Enter the IP address of the Metasploit VM
    * At RSSC19, the IP is `192.168.100.10`
@@ -58,11 +60,20 @@ Now we will use OpenVAS to perform a scan against our target host.
 Here we will look at the scan results to find vulnerabilities to exploit
 
 1. Click on `Scans` then `Results`
+
+![ScanResults](/screenshots/RSSC19_3.png)
+
 2. Sort by Severity by clicking on the `Severity` header in the Vulnerability table
    * You may need to click this twice to have it sort in descending order
+   
+![SortSeverity](/screenshots/RSSC19_4.png)
+
 3. Review some of the vulnerabilities on this page that are of `High` Severity. You can click on the name of the vulnerability to get more detail.
-4. Find the vulnerability titled `vsftpd Compromised Source Packages Backdoor Vulnerability` and click on it for more information
-   * Note: There may be more than one of these, select the one that shows a Location of `21/tcp`
+4. Find the vulnerability titled `vsftpd Compromised Source Packages Backdoor Vulnerability` and click on it for more information. This may be a few pages in, click the green arrow on the bottom right to advance the page until you find the vulnerability.
+   * Note: There may be more than one of this vulnerability, select the one that shows a Location of `21/tcp`
+
+![vsftpdVuln](/screenshots/RSSC19_5.png)
+
 5. We can learn from this page that there is a backdoor vulnerabillity in this FTP service that can be exploited.
 
 ### Finding and Running the Exploit
