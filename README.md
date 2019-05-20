@@ -127,4 +127,4 @@ whoami
 
 # Conclusion
 
-we hope this has been useful in seeing the process of scanning a target system for exploitable vulnerabilities, determining which are exploitable, finding the exploits, and executing them to gain access to a target host. It is a good idea to run vulnerability scanners like this in your own environment to determine where your weaknesses are so you can correct them before a malicious actor finds them instead.
+We hope this has been useful in seeing the process of scanning a target system for exploitable vulnerabilities, determining which are exploitable, finding the exploits, and executing them to gain access to a target host. It is a good idea to run vulnerability scanners like this in your own environment to determine where your weaknesses are so you can correct them before a malicious actor finds them instead.
